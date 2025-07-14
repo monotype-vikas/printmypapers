@@ -265,6 +265,35 @@ const OrderForm = ({ orderData, setOrderData, onSubmit }) => {
         <div className="order-content">
           <div className="order-grid">
             <form onSubmit={handleSubmit} className="form">
+              {/* Customer Information */}
+              <div className="customer-section">
+                <h3>👤 Customer Information</h3>
+                <div className="form-group">
+                  <label htmlFor="customerName">Full Name *</label>
+                  <input
+                    type="text"
+                    id="customerName"
+                    name="customerName"
+                    value={orderData.customerName || ""}
+                    onChange={handleInputChange}
+                    placeholder="Enter your full name"
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="customerPhone">Phone Number *</label>
+                  <input
+                    type="tel"
+                    id="customerPhone"
+                    name="customerPhone"
+                    value={orderData.customerPhone || ""}
+                    onChange={handleInputChange}
+                    placeholder="Enter your phone number"
+                    required
+                  />
+                </div>
+              </div>
+
               {/* Location Detection */}
               <div className="location-section">
                 <h3>📍 Location & Delivery</h3>
