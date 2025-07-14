@@ -78,7 +78,8 @@ export const sendOrderEmailWithEmailJS = async (orderDetails) => {
 
     // await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'YOUR_USER_ID');
 
-    return { success: true, message: "Email sent successfully" };
+    // For now, return success (this will be implemented when EmailJS is set up)
+    return { success: true, message: "EmailJS not configured yet" };
   } catch (error) {
     console.error("Error sending email with EmailJS:", error);
     return { success: false, message: "Failed to send email" };

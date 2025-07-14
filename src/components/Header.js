@@ -29,9 +29,7 @@ const Header = () => {
         <div className="logo">
           <div className="logo-main">
             <img src={logo} alt="PrintMyPapers Logo" className="logo-icon" />
-            <h1 className="logo-text">printmypapers</h1>
           </div>
-          <span className="logo-tagline">in just 10 mins</span>
         </div>
 
         <nav className="nav">

@@ -7,7 +7,6 @@ import OrderForm from "./components/OrderForm";
 import ResumeBuilder from "./components/ResumeBuilder";
 import Footer from "./components/Footer";
 import { sendOrderNotifications } from "./services/whatsappService";
-import { sendOrderEmail } from "./services/emailService";
 
 function App() {
   const [orderData, setOrderData] = useState({
