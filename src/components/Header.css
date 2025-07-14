@@ -38,8 +38,8 @@
 }
 
 .logo-icon {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 6rem;
+  height: 6rem;
   object-fit: contain;
 }
 
@@ -144,8 +144,8 @@
   }
 
   .logo-icon {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 4rem;
+    height: 4rem;
   }
 
   .nav {
