@@ -7,31 +7,31 @@ const Hero = () => {
   const carouselData = [
     {
       id: 1,
-      image:
-        "https://images.unsplash.com/photo-1586281380349-632531db7ed4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      title: "Professional Printing",
-      description: "High-quality prints for all your needs",
+      title: "24x7 Printout Service",
+      description: "Available across Noida",
+      icon: "🖨️",
+      bgColor: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
     },
     {
       id: 2,
-      image:
-        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      title: "Fast Delivery",
-      description: "Get your prints delivered in just 10 minutes",
+      title: "Free Delivery",
+      description: "Upto 3 Km",
+      icon: "🚚",
+      bgColor: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
     },
     {
       id: 3,
-      image:
-        "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      title: "Color & B&W",
-      description: "Both color and black & white printing available",
+      title: "Become a Partner",
+      description: "Join our network",
+      icon: "🤝",
+      bgColor: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
     },
     {
       id: 4,
-      image:
-        "https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      title: "Document Processing",
-      description: "Handle all types of documents professionally",
+      title: "Professional Printing",
+      description: "High-quality prints for all your needs",
+      icon: "✨",
+      bgColor: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
     },
   ];
 
@@ -59,63 +59,55 @@ const Hero = () => {
 
   return (
     <section id="home" className="hero">
+      <div className="hero-background">
+        <div className="hero-overlay"></div>
+      </div>
+
       <div className="hero-container">
         <div className="hero-content">
-          <div className="hero-badge">
-            <span className="badge-text">⚡ FAST SERVICE</span>
-          </div>
+          {/* Main Headline */}
           <h1 className="hero-title">
-            Get Your Printout in Just
-            <span className="highlight"> 10 Minutes!</span>
+            Professional Printing
+            <span className="highlight"> in 10 Minutes</span>
           </h1>
+
+          {/* Tagline */}
+          <p className="hero-tagline">Fast printing in 10 mins or less!</p>
+
+          {/* Subtitle */}
           <p className="hero-subtitle">
-            Professional printing services with lightning-fast delivery. Quality
-            prints at affordable prices, delivered to your doorstep.
+            Quality prints delivered to your doorstep. Perfect for students,
+            professionals, and businesses.
           </p>
 
-          {/* Carousel replacing hero-features */}
-          <div className="hero-carousel-section">
-            <div className="carousel-container">
-              {carouselData.map((slide, index) => (
-                <div
-                  key={slide.id}
-                  className={`carousel-slide ${
-                    index === currentSlide ? "active" : ""
-                  }`}
-                >
-                  <img
-                    src={slide.image}
-                    alt={slide.title}
-                    className="carousel-image"
-                  />
-                  <div className="carousel-overlay">
-                    <h3>{slide.title}</h3>
-                    <p>{slide.description}</p>
-                  </div>
-                </div>
-              ))}
-
-              <button className="carousel-arrow prev" onClick={prevSlide}>
-                ‹
-              </button>
-              <button className="carousel-arrow next" onClick={nextSlide}>
-                ›
-              </button>
-
-              <div className="carousel-nav">
-                {carouselData.map((_, index) => (
-                  <button
-                    key={index}
-                    className={`carousel-dot ${
-                      index === currentSlide ? "active" : ""
-                    }`}
-                    onClick={() => goToSlide(index)}
-                  />
-                ))}
-              </div>
+          {/* Trust Indicators */}
+          <div className="trust-indicators">
+            <div className="trust-item">
+              <span className="trust-icon">⚡</span>
+              <span>Lightning Fast</span>
+            </div>
+            <div className="trust-item">
+              <span className="trust-icon">🎯</span>
+              <span>100% Quality</span>
+            </div>
+            <div className="trust-item">
+              <span className="trust-icon">🚚</span>
+              <span>Free Delivery</span>
             </div>
           </div>
 
+          {/* Client Logos */}
+          <div className="client-logos">
+            <p className="logos-title">Trusted by:</p>
+            <div className="logos-grid">
+              <div className="logo-item">🏢 Universities</div>
+              <div className="logo-item">🏢 Offices</div>
+              <div className="logo-item">🏢 Students</div>
+              <div className="logo-item">🏢 Businesses</div>
+            </div>
+          </div>
+
+          {/* CTA Buttons */}
           <div className="hero-cta">
             <a href="#order" className="cta-button primary">
               Order Now
@@ -127,8 +119,59 @@ const Hero = () => {
               🎯 Free Resume Builder
             </a>
           </div>
+
+          {/* Mobile Sticky CTA */}
+          <div className="mobile-sticky-cta">
+            <a href="#order" className="sticky-order-btn">
+              📱 Order Now
+            </a>
+          </div>
         </div>
+
         <div className="hero-visual">
+          {/* Full Width Text Carousel */}
+          <div className="text-carousel-section">
+            <div className="text-carousel-container">
+              {carouselData.map((slide, index) => (
+                <div
+                  key={slide.id}
+                  className={`text-carousel-slide ${
+                    index === currentSlide ? "active" : ""
+                  }`}
+                  style={{ background: slide.bgColor }}
+                >
+                  <div className="text-carousel-content">
+                    <div className="text-carousel-icon">{slide.icon}</div>
+                    <h3 className="text-carousel-title">{slide.title}</h3>
+                    <p className="text-carousel-description">
+                      {slide.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+
+              <button className="text-carousel-arrow prev" onClick={prevSlide}>
+                ‹
+              </button>
+              <button className="text-carousel-arrow next" onClick={nextSlide}>
+                ›
+              </button>
+
+              <div className="text-carousel-nav">
+                {carouselData.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`text-carousel-dot ${
+                      index === currentSlide ? "active" : ""
+                    }`}
+                    onClick={() => goToSlide(index)}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* WhatsApp Section */}
           <div className="whatsapp-hero-section">
             <div className="whatsapp-hero-card">
               <h3>Order via WhatsApp</h3>
